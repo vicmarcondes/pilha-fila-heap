@@ -47,4 +47,7 @@ stack_info top(pilha);
  * de um parâmetro e sinaliza o sucesso ou falha da operação */
 bool top_and_test(pilha, stack_info *);
 
+/* função que copia uma pilha para outra pilha */
+bool copy_stack(pilha, pilha *);
+
 #endif
