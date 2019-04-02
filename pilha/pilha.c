@@ -21,5 +21,18 @@ void push(pilha * p, stack_info x) {
     if(!stack_isfull(*p)) {
         p->topo++;
         p->itens[p->topo] = x;
+    } 
+    else {
+        fprintf(stderr, "Pilha cheia!\n");
+        exit(1);
+    }
+}
+
+bool push_and_test(pilha * p, stack_info x) {
+    if(!stack_isfull) {
+        return false;
+    }
+    else {
+        push(p, x);
     }
 }
