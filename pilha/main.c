@@ -19,27 +19,27 @@ int main() {
                 printf("\nDigite um valor: ");
                 scanf("%d", &x);
                 if(!push_and_test(&p,x)) {
-                    fprintf(stderr, "Pilha cheia!\n");
+                    fprintf(stderr, "\nPilha cheia!\n");
                 }
                 break;   
             case 2:
                 printf("\n--- Removendo da pilha ---\n");                             
                 if(!pop_and_test(&p, &x)) {
-                    fprintf(stderr, "Pilha vazia!\n");
+                    fprintf(stderr, "\nPilha vazia!\n");
                 }
                 else 
                 {
-                    printf("Valor removido: %d\n", x);
+                    printf("\nValor removido: %d\n", x);
                 }
                 break;      
             case 3:
                 printf("\n--- Elemento do topo da pilha ---\n");                             
                 if(!top_and_test(p, &x)) {
-                    fprintf(stderr, "Pilha vazia!\n");
+                    fprintf(stderr, "\nPilha vazia!\n");
                 }
                 else 
                 {
-                    printf("Valor resgatado: %d\n", x);
+                    printf("\nValor resgatado: %d\n", x);
                 }
                 break;    
         }
