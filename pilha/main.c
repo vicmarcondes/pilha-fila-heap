@@ -8,6 +8,7 @@ int main() {
     while(escolha != 0) {
         printf("<1> Insere na pilha\n");
         printf("<2> Remove da pilha\n");
+        printf("<3> Resgata o elemento do topo da pilha\n");
         printf("<0> Sair\n");
         printf(">>");
         scanf("%d", &escolha);
@@ -30,7 +31,17 @@ int main() {
                 {
                     printf("Valor removido: %d\n", x);
                 }
-                break;       
+                break;      
+            case 3:
+                printf("\n--- Elemento do topo da pilha ---\n");                             
+                if(!top_and_test(p, &x)) {
+                    fprintf(stderr, "Pilha vazia!\n");
+                }
+                else 
+                {
+                    printf("Valor resgatado: %d\n", x);
+                }
+                break;    
         }
     }
     

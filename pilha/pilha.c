@@ -29,7 +29,7 @@ void push(pilha * p, stack_info x) {
 }
 
 bool push_and_test(pilha * p, stack_info x) {
-    if(!stack_isfull) {
+    if(stack_isfull(*p)) {
         return false;
     }
     else {
@@ -49,11 +49,30 @@ stack_info pop(pilha * p) {
 }
 
 bool pop_and_test(pilha * p, stack_info *x) {
-    if(!stack_isfull) {
+    if(stack_isfull(*p)) {
         return false;
     }
     else {
         *x = pop(p);
         return true;
+    }
+}
+
+stack_info top(pilha p) {
+    if(!stack_isempty(p)) {
+        return p.itens[p.topo];
+    }
+    else {
+        fprintf(stderr, "Pilha vazia!");
+    }
+}
+
+bool top_and_test(pilha p, stack_info * x) {
+    if(!stack_isempty(p)) {
+        * x = top(p);
+        return true;
+    }
+    else {
+        return false;
     }
 }
