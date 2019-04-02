@@ -34,6 +34,7 @@ bool push_and_test(pilha * p, stack_info x) {
     }
     else {
         push(p, x);
+        return true;
     }
 }
 
@@ -44,5 +45,15 @@ stack_info pop(pilha * p) {
     else {
         fprintf(stderr, "Pilha vazia!");
         exit(1);
+    }
+}
+
+bool pop_and_test(pilha * p, stack_info *x) {
+    if(!stack_isfull) {
+        return false;
+    }
+    else {
+        *x = pop(p);
+        return true;
     }
 }

@@ -6,8 +6,10 @@
  */
 #ifndef _PILHA_H // previne que o arquivo seja incluído mais de uma vez
 #define _PILHA_H // na mesma aplicação
-#define STACK_MAX 10 // número máximo de elementos da pilha
+#define STACK_MAX 5 // número máximo de elementos da pilha
 #include <stdbool.h> // define o tipo de dado bool (para valores lógicos)
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef int stack_info; // tipo de dado da pilha
 typedef struct {
