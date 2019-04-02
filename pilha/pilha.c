@@ -36,3 +36,13 @@ bool push_and_test(pilha * p, stack_info x) {
         push(p, x);
     }
 }
+
+stack_info pop(pilha * p) {
+    if(!stack_isempty(*p)) {
+        return p->itens[p->topo--];
+    } 
+    else {
+        fprintf(stderr, "Pilha vazia!");
+        exit(1);
+    }
+}
